@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/assets/css/gbhat-default.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/google-code-prettify/prettify.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171492346-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-171492346-1', { 'anonymize_ip': true }); </script> <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script> <script type="text/javascript" src="/assets/js/gbhat.min.js"></script> <script type="text/javascript" src="/assets/google-code-prettify/prettify.js"></script><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spark ML pipeline for regression | gbhat.com</title>
+<meta name="generator" content="Jekyll v3.8.7">
+<meta property="og:title" content="Spark ML pipeline for regression">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Spark ML pipeline for fuel efficiency regression">
+<meta property="og:description" content="Spark ML pipeline for fuel efficiency regression">
+<link rel="canonical" href="https://gbhat.com/spark/spark_ml_regression_pipeline.html">
+<meta property="og:url" content="https://gbhat.com/spark/spark_ml_regression_pipeline.html">
+<meta property="og:site_name" content="gbhat.com">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-11-24T00:00:00+05:30"> <script type="application/ld+json"> {"description":"Spark ML pipeline for fuel efficiency regression","@type":"BlogPosting","datePublished":"2021-11-24T00:00:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://gbhat.com/spark/spark_ml_regression_pipeline.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://gbhat.com/assets/images/gbhat.png"}},"url":"https://gbhat.com/spark/spark_ml_regression_pipeline.html","headline":"Spark ML pipeline for regression","dateModified":"2021-11-24T00:00:00+05:30","@context":"https://schema.org"}</script><meta content="gbhat.com" property="og:site_name">
+<meta content="Spark ML pipeline for regression" property="og:title">
+<meta content="article" property="og:type">
+<meta content="Spark ML pipeline for fuel efficiency regression" property="og:description">
+<meta content="https://gbhat.com/spark/spark_ml_regression_pipeline.html" property="og:url">
+<meta content="/assets/images/spark_ml.png" property="og:image">
+</head>
+<body> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="svg-link" viewbox="0 0 24 24"><title>Link</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-search" viewbox="0 0 24 24"><title>Search</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <symbol id="svg-search-close" viewbox="0 0 24 24"><title>Close Search</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" enable-background="new 0 0 40 40"><line x1="15" y1="15" x2="25" y2="25" stroke="#888" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10"></line><line x1="25" y1="15" x2="15" y2="25" stroke="#888" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10"></line> <circle class="circle" cx="20" cy="20" r="19" stroke="#aaa" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" fill="none"></circle> </svg></symbol> <symbol id="svg-menu" viewbox="0 0 24 24"><title>Menu</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewbox="0 0 24 24"><title>Expand</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <symbol id="svg-doc" viewbox="0 0 24 24"><title>Document</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> </svg><div class="side-bar">
+<div class="site-header"> <a href="https://gbhat.com/" class="site-title lh-tight"><div class="site-logo"></div></a> <a href="#" id="menu-button" class="site-button"> <svg viewbox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a>
+</div>
+<div class="search">
+<div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search gbhat.com" aria-label="Search gbhat.com" autocomplete="off"> <label for="search-input" class="search-label"> <svg viewbox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg> </label> <label for="search-close-input" class="search-close"> <svg viewbox="0 0 12 12" class="search-close-icon"><use xlink:href="#svg-search-close"></use></svg> <label for="searc-close-input" class="search-close"></label></label>
+</div>
+<div id="search-results" class="search-results"></div>
+</div>
+<nav role="navigation" aria-label="Main" id="site-nav" class="site-nav"><ul class="nav-list">
+<li class="nav-list-item"><a href="https://gbhat.com/" class="nav-list-link">Featured Posts</a></li>
+<li class="nav-list-item">
+<a href="#" class="nav-list-expander"><svg viewbox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://gbhat.com/algorithms/index.html" class="nav-list-link">Algorithms</a><ul class="nav-list ">
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/knights_tour.html" class="nav-list-link">Knights Tour Problem</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/n_queens.html" class="nav-list-link">N Queens Problem</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/kmp.html" class="nav-list-link">Knuth-Morris-Pratt Algorithm</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/tower_of_hanoi.html" class="nav-list-link">Tower Of Hanoi</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/interpolation_search.html" class="nav-list-link">Interpolation Search</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/merge_sort.html" class="nav-list-link">Merge Sort</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/quick_sort.html" class="nav-list-link">Quick Sort</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/heap_sort.html" class="nav-list-link">Heap Sort</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/binary_search.html" class="nav-list-link">Binary Search</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/insertion_sort.html" class="nav-list-link">Insertion Sort</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/selection_sort.html" class="nav-list-link">Selection Sort</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/bubble_sort.html" class="nav-list-link">Bubble Sort</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/bruteforce_string_search.html" class="nav-list-link">Brute-Force String Search Algorithm</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/algorithms/linear_search.html" class="nav-list-link">Linear Search</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<a href="#" class="nav-list-expander"><svg viewbox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://gbhat.com/machine_learning/index.html" class="nav-list-link">Machine Learning</a><ul class="nav-list ">
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/sgd_vs_lbfgsb.html" class="nav-list-link">Gradient Descent vs L-BFGS-B</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine-learning/scikit_learn_ml_regression_pipeline.html" class="nav-list-link">Scikit-Learn ML pipeline for regression</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/pso_shcb.html" class="nav-list-link">Particle Swarm Optimization on Non-Convex Function</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/pso_nonconvex.html" class="nav-list-link">Particle Swarm Optimization on Non-Convex Function</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/pso_convex.html" class="nav-list-link">Particle Swarm Optimization on Convex Function</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/gradient_descent_nesterov.html" class="nav-list-link">Gradient Descent Nesterov Momentum</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/gradient_descent_learning_rates.html" class="nav-list-link">Gradient Descent Learning Rates</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/gradient_descent_with_momentum.html" class="nav-list-link">Gradient Descent with Momentum</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/gradient_descent_anim.html" class="nav-list-link">Gradient Descent Animation</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/gradient_descent.html" class="nav-list-link">Gradient Descent</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/optimize_with_momentum.html" class="nav-list-link">Optimization with Momentum</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/polynomial_regression_fit.html" class="nav-list-link">Polynomial Regression Under Fit, Good Fit, Over Fit</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/polynomial_regression_2.html" class="nav-list-link">Polynomial Regression 2</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/polynomial_regression.html" class="nav-list-link">Polynomial Regression</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/machine_learning/linear_regression.html" class="nav-list-link">Linear Regression</a></li>
+</ul>
+</li>
+<li class="nav-list-item active">
+<a href="#" class="nav-list-expander"><svg viewbox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://gbhat.com/spark/index.html" class="nav-list-link">Spark</a><ul class="nav-list ">
+<li class="nav-list-item active"><a href="https://gbhat.com/spark/spark_ml_regression_pipeline.html" class="nav-list-link active">Spark ML pipeline for regression</a></li>
+<li class="nav-list-item "><a href="https://gbhat.com/spark/spark_pushdown_optimizations.html" class="nav-list-link">Spark Pushdown Optimizations</a></li>
+</ul>
+</li>
+<li class="nav-list-item">
+<a href="#" class="nav-list-expander"><svg viewbox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://gbhat.com/sysdesign/index.html" class="nav-list-link">System Design</a><ul class="nav-list "><li class="nav-list-item "><a href="https://gbhat.com/sysdesign/nginx_load_balancing.html" class="nav-list-link">NGINX Uniform Load Balancing</a></li></ul>
+</li>
+</ul></nav><footer class="site-footer"></footer>
+</div>
+<div class="main" id="top">
+<div id="main-header" class="main-header">
+<h3 class="page_title_main">Spark ML pipeline for regression</h3>
+<div class="share-container"> <button class="share-btn"> <i class="fa fa-share-alt fa-2x" style="color: #0277cc"></i> </button><div class="share-box"> <a class="l_share" href="https://www.linkedin.com/shareArticle?mini=true&url=https://gbhat.com/spark/spark_ml_regression_pipeline.html&amp;title=&amp;summary=&amp;source=webjeda" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin fa-2x"></i></a> <a class="f_share" href="https://www.facebook.com/sharer/sharer.php?u=https://gbhat.com/spark/spark_ml_regression_pipeline.html" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official fa-2x"></i></a> <a class="t_share" href="https://twitter.com/intent/tweet?text=&url=https://gbhat.com/spark/spark_ml_regression_pipeline.html" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter fa-2x"></i></a> <a class="r" href="http://www.reddit.com/submit?url=https://gbhat.com/spark/spark_ml_regression_pipeline.html" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit fa-2x"></i></a> <a href="whatsapp://send?text=https://gbhat.com/spark/spark_ml_regression_pipeline.html" id="share-wa" class="sharer button"><i class="fa fa-3x fa-whatsapp"></i></a> <a class="e_share" href="mailto:?subject=&amp;body=Check%20out%20this%20site%20https://gbhat.com/spark/spark_ml_regression_pipeline.html"><i class="fa fa-envelope fa-2x"></i></a>
+</div>
+</div>
+</div>
+<div id="main-content-wrap" class="main-content-wrap"><div id="main-content" class="main-content" role="main">
+<div class="img_container"> <img class="post_img" src="/assets/images/spark_ml_pipeline.png"><p class="img_desc">Figure 1: Spark ML pipeline with multiple transformations</p>
+</div>
+<p>This post shows the usage of Spark ML pipelines to transform the data and train the models. <br> Spark ML pipelines consist of multiple stages which will be run in specific order. These stages can be either Transformers or Estimators. We can see more details on Spark ML Pipelines <a href="https://spark.apache.org/docs/latest/ml-pipeline.html">here</a> <br></p>
+<h2 id="auto-mpg-dataset"> <a href="#auto-mpg-dataset" class="anchor-heading" aria-labelledby="auto-mpg-dataset"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong>Auto MPG dataset</strong>
+</h2>
+<p>We will take the example dataset of measuring fuel efficiency of cars. The original dataset is available <a href="https://archive.ics.uci.edu/ml/datasets/auto+mpg">here</a> <br> I have taken this data and pre-processed it a bit to use it easily in this example (adding headers, change column delimiter etc.) This dataset which we will use can be downloaded from <a href="https://github.com/gbhat/SparkExamples/raw/master/auto-mpg.csv.gz">here</a> <br></p>
+<p>This data contains features: MPG, Cylinders, Displacement, Horsepower, Weight, Acceleration, Model Year, Origin, Car Name. MPG specifies the fuel efficiency of the car.</p>
+<h2 id="visualizing-the-data"> <a href="#visualizing-the-data" class="anchor-heading" aria-labelledby="visualizing-the-data"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong>Visualizing the data</strong>
+</h2>
+<p>We can load this data and visualize it either using Python or Tableau. The Tableau view for scatter plots is shown below:</p>
+<div class="img_container"> <img class="post_img" src="/assets/images/mpg_scatter.png"><p class="img_desc">Figure 1: Spark ML pipeline with multiple transformations</p>
+</div>
+<p>The correlation matrix for the features is below:</p>
+<div class="output_text"><pre>
++------------+------+---------+------------+----------+------+------------+
+|            |MPG   |Cylinders|Displacement|Horsepower|Weight|Acceleration|
++------------+------+---------+------------+----------+------+------------+
+|MPG         |+1.000|-0.778   |-0.805      |-0.778    |-0.832|+0.423      |
+|Cylinders   |-0.778|+1.000   |+0.951      |+0.843    |+0.898|-0.505      |
+|Displacement|-0.805|+0.951   |+1.000      |+0.897    |+0.933|-0.544      |
+|Horsepower  |-0.778|+0.843   |+0.897      |+1.000    |+0.865|-0.689      |
+|Weight      |-0.832|+0.898   |+0.933      |+0.865    |+1.000|-0.417      |
+|Acceleration|+0.423|-0.505   |-0.544      |-0.689    |-0.417|+1.000      |
++------------+------+---------+------------+----------+------+------------+
+</pre></div>
+<p>We can see in the scatter plot and correlation matrix that as the horsepower, weight and displacement increase, MPG is reducing.</p>
+<h2 id="reading-and-transforming-the-data"> <a href="#reading-and-transforming-the-data" class="anchor-heading" aria-labelledby="reading-and-transforming-the-data"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong>Reading and transforming the data</strong>
+</h2>
+<p>Now let us read the data and see the columns, type of columns and more details. To read data, we will use:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">spark</span><span class="o">.</span><span class="na">read</span><span class="o">()</span>
+	<span class="o">.</span><span class="na">option</span><span class="o">(</span><span class="s">"header"</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">option</span><span class="o">(</span><span class="s">"inferSchema"</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">option</span><span class="o">(</span><span class="s">"delimiter"</span><span class="o">,</span> <span class="s">"|"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">csv</span><span class="o">(</span><span class="s">"auto-mpg.csv.gz"</span><span class="o">);</span>
+</code></pre></div></div>
+<p>We are using these options to read the data:</p>
+<ul>
+<li>• <em>header</em> specifies that there is a header line in the csv file</li>
+<li>• <em>inferSchema</em> to automatically determine the type of data in each column</li>
+<li>• <em>delimiter</em> to sepcify that we are using pipe(‘|’) as the delimiter between the fields</li>
+</ul>
+<p>If we print the schema to see the type of each column:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">inDs</span><span class="o">.</span><span class="na">printSchema</span><span class="o">();</span>
+</code></pre></div></div>
+<p>This shows the output:</p>
+<div class="output_text"><pre>
+root
+ |-- MPG: double (nullable = true)
+ |-- Cylinders: integer (nullable = true)
+ |-- Displacement: double (nullable = true)
+ |-- Horsepower: double (nullable = true)
+ |-- Weight: double (nullable = true)
+ |-- Acceleration: double (nullable = true)
+ |-- Model Year: integer (nullable = true)
+<span class="output_highlight"> |-- Origin: string (nullable = true)
+ |-- Car Name: string (nullable = true)</span>
+</pre></div>
+<p>Schema shows that the columns except Origin and Car Name are of numeric type. Let us see the unique values in the Origin column:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">inDs</span><span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="s">"Origin"</span><span class="o">).</span><span class="na">distinct</span><span class="o">().</span><span class="na">show</span><span class="o">();</span>
+</code></pre></div></div>
+<div class="output_text"><pre>
++------+
+|Origin|
++------+
+|Europe|
+|   USA|
+| Japan|
++------+
+</pre></div>
+<p>Origin is a categoric value, we will convert it to one hot encoding.</p>
+<p>Similarly car name is also a string feature. Since car name is not having any relation to the fuel efficiency, we will drop this column.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">inDs</span> <span class="o">=</span> <span class="n">inDs</span><span class="o">.</span><span class="na">drop</span><span class="o">(</span><span class="s">"Car Name"</span><span class="o">);</span>
+</code></pre></div></div>
+<p>Let us see the summary of all the data including the count of values in each column using:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">inDs</span><span class="o">.</span><span class="na">summary</span><span class="o">().</span><span class="na">show</span><span class="o">();</span>
+</code></pre></div></div>
+<p>It shows the below output:</p>
+<div class="output_text"><pre>
++-------+------------------+------------------+------------------+------------------+-----------------+------------------+------------------+------+
+|summary|               MPG|         Cylinders|      Displacement|        Horsepower|           Weight|      Acceleration|        Model Year|Origin|
++-------+------------------+------------------+------------------+------------------+-----------------+------------------+------------------+------+
+|  count|               398|               398|               398|               392|              398|               398|               398|   398|
+|   mean|23.514572864321615| 5.454773869346734|193.42587939698493|104.46938775510205|2970.424623115578|15.568090452261291| 76.01005025125629|  null|
+| stddev| 7.815984312565783|1.7010042445332123|104.26983817119587| 38.49115993282846|846.8417741973268| 2.757688929812676|3.6976266467325862|  null|
+|    min|               9.0|                 3|              68.0|              46.0|           1613.0|               8.0|                70|Europe|
+|    25%|              17.5|                 4|             104.0|              75.0|           2223.0|              13.8|                73|  null|
+|    50%|              23.0|                 4|             146.0|              93.0|           2800.0|              15.5|                76|  null|
+|    75%|              29.0|                 8|             262.0|             125.0|           3609.0|              17.2|                79|  null|
+|    max|              46.6|                 8|             455.0|             230.0|           5140.0|              24.8|                82|   USA|
++-------+------------------+------------------+------------------+------------------+-----------------+------------------+------------------+------+
+</pre></div>
+<p>We can see that Horsepower has missing values. We will have to fill in those missing values. Also we can note that each feature has different ranges. <br></p>
+<p>We can build the pipeline to transform the data to the required format before we train the models. <br> Transformer and the purpose of it is summarized below:</p>
+<p><strong>Imputer:</strong> Since we have missing values in Horsepower column, we will fill the missing data using median of all the remaining values. <br> <strong>StringIndexer:</strong> Origin is a categorical column. Before we convert it to a one hot encoding we need to assign label indicies to each unique value. StringIndexer will perform this operation. We can see the assigned values below:</p>
+<div class="output_text"><pre>
++------+---------+
+|Origin|OriginIdx|
++------+---------+
+| Japan|      1.0|
+|Europe|      2.0|
+|   USA|      0.0|
++------+---------+
+</pre></div>
+<p><strong>OneHotEncoder:</strong> Once StringIndexer stage is completed, we can convert the categorical values to one-hot encoding using this transformation. <br> Once this stage completes the transformed categorical value looks like this:</p>
+<div class="output_text"><pre>
++------+-------------+
+|Origin|    OriginVec|
++------+-------------+
+|   USA|(2,[0],[1.0])|
+| Japan|(2,[1],[1.0])|
+|Europe|    (2,[],[])|
++------+-------------+
+</pre></div>
+<p>OriginVec is a sparse vector which shows the nonzero indices and their values. Sparse Vector is an efficient format for this data since at most only one value is set in the vector. <br> But if we want to see this vector in dense format, we can convert this sparse vector to dense:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">transformedDs</span><span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="s">"Origin"</span><span class="o">,</span> <span class="s">"OriginVec"</span><span class="o">)</span>
+	<span class="o">.</span><span class="na">withColumn</span><span class="o">(</span><span class="s">"OriginVecDense"</span><span class="o">,</span> <span class="n">functions</span><span class="o">.</span><span class="na">udf</span><span class="o">((</span><span class="no">UDF1</span><span class="o">&lt;</span><span class="nc">Vector</span><span class="o">,</span> <span class="nc">Object</span><span class="o">&gt;)</span> <span class="nl">Vector:</span><span class="o">:</span><span class="n">toDense</span><span class="o">,</span> <span class="k">new</span> <span class="nc">VectorUDT</span><span class="o">())</span>
+       		<span class="o">.</span><span class="na">apply</span><span class="o">(</span><span class="n">transformedDs</span><span class="o">.</span><span class="na">col</span><span class="o">(</span><span class="s">"OriginVec"</span><span class="o">))).</span><span class="na">distinct</span><span class="o">().</span><span class="na">show</span><span class="o">();</span>
+</code></pre></div></div>
+<p>One hot encoded Origin column in sparse and dense format looks like:</p>
+<div class="output_text"><pre>
++------+-------------+--------------+
+|Origin|    OriginVec|OriginVecDense|
++------+-------------+--------------+
+| Japan|(2,[1],[1.0])|     [0.0,1.0]|
+|   USA|(2,[0],[1.0])|     [1.0,0.0]|
+|Europe|    (2,[],[])|     [0.0,0.0]|
++------+-------------+--------------+
+</pre></div>
+<p><strong>VectorAssembler:</strong> Vector assembler combines multiple columns into one vector format. We will combine all the transformed columns into one vector. <br> <strong>StandardScaler:</strong> The features in the dataset are not in the same range. Machine learning algorithms perform well when data is in similar ranges. <br> We will use StandarScaler to scale the data.</p>
+<h2 id="build-the-model-predict-and-evaluate-the-model"> <a href="#build-the-model-predict-and-evaluate-the-model" class="anchor-heading" aria-labelledby="build-the-model-predict-and-evaluate-the-model"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong>Build the model, predict and evaluate the model</strong>
+</h2>
+<p>Once the data is transformed and is ready for training, we can build the model. At first let us split the data and set aside a test data set <br></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Dataset</span><span class="o">&lt;</span><span class="nc">Row</span><span class="o">&gt;[]</span> <span class="n">splits</span> <span class="o">=</span> <span class="n">transformedDs</span><span class="o">.</span><span class="na">randomSplit</span><span class="o">(</span><span class="k">new</span> <span class="kt">double</span><span class="o">[]</span> <span class="o">{</span><span class="mf">0.7</span><span class="o">,</span> <span class="mf">0.3</span><span class="o">},</span> <span class="mi">0</span><span class="o">);</span>
+<span class="nc">Dataset</span><span class="o">&lt;</span><span class="nc">Row</span><span class="o">&gt;</span> <span class="n">trainDs</span> <span class="o">=</span> <span class="n">splits</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+<span class="nc">Dataset</span><span class="o">&lt;</span><span class="nc">Row</span><span class="o">&gt;</span> <span class="n">testDs</span> <span class="o">=</span> <span class="n">splits</span><span class="o">[</span><span class="mi">1</span><span class="o">];</span>
+</code></pre></div></div>
+<p>First model we will try is a LinearRegression. We can build the model by using:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LinearRegression</span> <span class="n">lr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinearRegression</span><span class="o">()</span>
+	<span class="o">.</span><span class="na">setRegParam</span><span class="o">(</span><span class="mf">0.3</span><span class="o">)</span>
+	<span class="o">.</span><span class="na">setFeaturesCol</span><span class="o">(</span><span class="s">"TrainFeaturesScaled"</span><span class="o">)</span>
+	<span class="o">.</span><span class="na">setLabelCol</span><span class="o">(</span><span class="s">"MPG"</span><span class="o">);</span>
+<span class="nc">LinearRegressionModel</span> <span class="n">lrModel</span> <span class="o">=</span> <span class="n">lr</span><span class="o">.</span><span class="na">fit</span><span class="o">(</span><span class="n">trainDs</span><span class="o">);</span>
+</code></pre></div></div>
+<p>We are setting the train features and the label columns. We are also setting a regularization parameter which will help in better generalization <br> Once the model is built, we can predict the values of the test data. By default the predicted values are in the column “prediction”. Let us see the 10 predicted values and the expected value.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Dataset</span><span class="o">&lt;</span><span class="nc">Row</span><span class="o">&gt;</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">lrModel</span><span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="n">testDs</span><span class="o">);</span>
+<span class="n">predictions</span><span class="o">.</span><span class="na">selectExpr</span><span class="o">(</span><span class="s">"MPG"</span><span class="o">,</span> <span class="s">"round(prediction, 3) as prediction"</span><span class="o">).</span><span class="na">show</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+</code></pre></div></div>
+<div class="output_text"><pre>
++----+----------+
+| MPG|prediction|
++----+----------+
+| 9.0|     7.643|
+|11.0|    15.812|
+|12.0|    11.554|
+|13.0|    16.405|
+|13.0|    11.631|
+|13.0|     12.56|
+|13.0|     9.444|
+|13.0|     7.372|
+|14.0|    14.028|
+|14.0|    13.481|
++----+----------+
+</pre></div>
+<p>We can see some of the predictions are close to the actual values. We can quantitatively measure the models performance. <br> RMSE (Root Mean Squared Error) is a performance measure for regression models. We can measure the RMSE of this model by:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">RegressionEvaluator</span> <span class="n">evaluator</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RegressionEvaluator</span><span class="o">()</span>
+	<span class="o">.</span><span class="na">setLabelCol</span><span class="o">(</span><span class="s">"MPG"</span><span class="o">)</span>
+	<span class="o">.</span><span class="na">setPredictionCol</span><span class="o">(</span><span class="s">"prediction"</span><span class="o">)</span>
+	<span class="o">.</span><span class="na">setMetricName</span><span class="o">(</span><span class="s">"rmse"</span><span class="o">);</span>
+</code></pre></div></div>
+<p>This gives us the output:</p>
+<div class="output_text"><pre>
+Linear Regression RMSE on test data = <span class="output_highlight"> 3.606182319282716 </span>
+</pre></div>
+<p>Let us build another model using RandomForestRegressor. This can be done by using:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">RandomForestRegressor</span> <span class="n">rfRegressor</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RandomForestRegressor</span><span class="o">()</span>
+	<span class="o">.</span><span class="na">setNumTrees</span><span class="o">(</span><span class="mi">8</span><span class="o">)</span>
+	<span class="o">.</span><span class="na">setSeed</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+	<span class="o">.</span><span class="na">setFeaturesCol</span><span class="o">(</span><span class="s">"TrainFeaturesScaled"</span><span class="o">)</span>
+	<span class="o">.</span><span class="na">setLabelCol</span><span class="o">(</span><span class="s">"MPG"</span><span class="o">);</span>
+<span class="nc">RandomForestRegressionModel</span> <span class="n">rfModel</span> <span class="o">=</span> <span class="n">rfRegressor</span><span class="o">.</span><span class="na">fit</span><span class="o">(</span><span class="n">trainDs</span><span class="o">);</span>
+</code></pre></div></div>
+<p>If we measure the RMSE of this model using the same approach as above, we can see that:</p>
+<div class="output_text"><pre>
+Random Forest Regression RMSE on test data = <span class="output_highlight"> 2.9796895291729486 </span>
+</pre></div>
+<p>This is better performance compared to Linear Regression model. <br></p>
+<p>We can further tweak the model parameters or build different models to further improve the prediction. <br> Since the goal of this post was to show the usage of Spark ML pipelines and how we can use them to train regression models, we will stop here.</p>
+<h2 id="complete-implementation-of-spark-ml-pipeline-for-regression"> <a href="#complete-implementation-of-spark-ml-pipeline-for-regression" class="anchor-heading" aria-labelledby="complete-implementation-of-spark-ml-pipeline-for-regression"><svg viewbox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <strong>Complete implementation of Spark ML Pipeline for regression</strong>
+</h2>
+<div id="java_tab" class="tab-pane fade in active"><div class="code_container" src="https://raw.githubusercontent.com/gbhat/SparkExamples/master/src/main/java/com/gbhat/spark/SparkMLRegressionPipeline.java">
+<div class="code_header">
+<div class="code_filename_cont"><span class="code_filename"></span></div>
+<div class="copy_code"> <button class="copy_code_btn" code-data="" type="button"> <svg height="16" viewbox="0 0 16 16" version="1.1" width="16" class="copy_code_icon"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path> </svg> <svg height="16" viewbox="0 0 16 16" version="1.1" width="16" class="copy_confirm_icon"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path> </svg><div class="copy_confirm_text">Copied!</div></button>
+</div>
+</div>
+<pre class="prettyprint linenums:1 lang-python"></pre>
+</div></div>
+<hr>
+<footer><p><a href="#top" id="back-to-top">Back to top</a></p>
+<p class="text-small text-grey-dk-100 mb-0">Copyright © 2020-2021 Gajanan Bhat. All rights reserved.</p>
+<div class="d-flex mt-2"></div></footer>
+</div></div>
+<div id="disqus_thread"></div>
+<script> var disqus_config = function () { this.page.url = 'https://gbhat.com/spark/spark_ml_regression_pipeline.html'; this.page.identifier = 'https://gbhat.com/spark/spark_ml_regression_pipeline.html'; }; (function() { var d = document, s = d.createElement('script'); s.src = 'https://gbhat-com.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+</div>
+</body>
+</html>
