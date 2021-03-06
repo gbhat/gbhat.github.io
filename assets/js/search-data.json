@@ -1,2 +1,254 @@
-{
+{"0": {
+    "doc": "Binary Search",
+    "title": "Visualization of Binary Search",
+    "description": "Visualization and Implementation of Binary Search",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/binary_search.html#visualization-of-binary-search",
+    "relUrl": "/algorithms/binary_search.html#visualization-of-binary-search"
+  },"1": {
+    "doc": "Binary Search",
+    "title": "Implementation of Binary Search",
+    "description": "Visualization and Implementation of Binary Search",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/binary_search.html#implementation-of-binary-search",
+    "relUrl": "/algorithms/binary_search.html#implementation-of-binary-search"
+  },"2": {
+    "doc": "Binary Search",
+    "title": "Binary Search",
+    "description": "Visualization and Implementation of Binary Search",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/binary_search.html",
+    "relUrl": "/algorithms/binary_search.html"
+  },"3": {
+    "doc": "Brute-Force String Search Algorithm",
+    "title": "Visualization of Brute-Force String Search Algorithm",
+    "description": "Visualization and Implementation of Brute-Force String Search String Search Algorithm",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/bruteforce_string_search.html#visualization-of-brute-force-string-search-algorithm",
+    "relUrl": "/algorithms/bruteforce_string_search.html#visualization-of-brute-force-string-search-algorithm"
+  },"4": {
+    "doc": "Brute-Force String Search Algorithm",
+    "title": "Implementation of Brute-Force String Search Algorithm",
+    "description": "Visualization and Implementation of Brute-Force String Search String Search Algorithm",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/bruteforce_string_search.html#implementation-of-brute-force-string-search-algorithm",
+    "relUrl": "/algorithms/bruteforce_string_search.html#implementation-of-brute-force-string-search-algorithm"
+  },"5": {
+    "doc": "Brute-Force String Search Algorithm",
+    "title": "Brute-Force String Search Algorithm",
+    "description": "Visualization and Implementation of Brute-Force String Search String Search Algorithm",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/bruteforce_string_search.html",
+    "relUrl": "/algorithms/bruteforce_string_search.html"
+  },"6": {
+    "doc": "Bubble Sort",
+    "title": "Visualization of Bubble Sort",
+    "description": "Visualization and Implementation of Bubble Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/bubble_sort.html#visualization-of-bubble-sort",
+    "relUrl": "/algorithms/bubble_sort.html#visualization-of-bubble-sort"
+  },"7": {
+    "doc": "Bubble Sort",
+    "title": "Implementation of Bubble Sort",
+    "description": "Visualization and Implementation of Bubble Sort",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/bubble_sort.html#implementation-of-bubble-sort",
+    "relUrl": "/algorithms/bubble_sort.html#implementation-of-bubble-sort"
+  },"8": {
+    "doc": "Bubble Sort",
+    "title": "Bubble Sort",
+    "description": "Visualization and Implementation of Bubble Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/bubble_sort.html",
+    "relUrl": "/algorithms/bubble_sort.html"
+  },"9": {
+    "doc": "Heap Sort",
+    "title": "Visualization of Heap Sort",
+    "description": "Visualization and Implementation of Heap Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/heap_sort.html#visualization-of-heap-sort",
+    "relUrl": "/algorithms/heap_sort.html#visualization-of-heap-sort"
+  },"10": {
+    "doc": "Heap Sort",
+    "title": "Implementation of Heap Sort",
+    "description": "Visualization and Implementation of Heap Sort",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/heap_sort.html#implementation-of-heap-sort",
+    "relUrl": "/algorithms/heap_sort.html#implementation-of-heap-sort"
+  },"11": {
+    "doc": "Heap Sort",
+    "title": "Heap Sort",
+    "description": "Visualization and Implementation of Heap Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/heap_sort.html",
+    "relUrl": "/algorithms/heap_sort.html"
+  },"12": {
+    "doc": "Insertion Sort",
+    "title": "Visualization of Insertion Sort",
+    "description": "Visualization and Implementation of Insertion Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/insertion_sort.html#visualization-of-insertion-sort",
+    "relUrl": "/algorithms/insertion_sort.html#visualization-of-insertion-sort"
+  },"13": {
+    "doc": "Insertion Sort",
+    "title": "Implementation of Insertion Sort",
+    "description": "Visualization and Implementation of Insertion Sort",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/insertion_sort.html#implementation-of-insertion-sort",
+    "relUrl": "/algorithms/insertion_sort.html#implementation-of-insertion-sort"
+  },"14": {
+    "doc": "Insertion Sort",
+    "title": "Insertion Sort",
+    "description": "Visualization and Implementation of Insertion Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/insertion_sort.html",
+    "relUrl": "/algorithms/insertion_sort.html"
+  },"15": {
+    "doc": "Interpolation Search",
+    "title": "Visualization of Interpolation Search",
+    "description": "Visualization and Implementation of Interpolation Search",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/interpolation_search.html#visualization-of-interpolation-search",
+    "relUrl": "/algorithms/interpolation_search.html#visualization-of-interpolation-search"
+  },"16": {
+    "doc": "Interpolation Search",
+    "title": "Implementation of Interpolation Search",
+    "description": "Visualization and Implementation of Interpolation Search",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/interpolation_search.html#implementation-of-interpolation-search",
+    "relUrl": "/algorithms/interpolation_search.html#implementation-of-interpolation-search"
+  },"17": {
+    "doc": "Interpolation Search",
+    "title": "Interpolation Search",
+    "description": "Visualization and Implementation of Interpolation Search",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/interpolation_search.html",
+    "relUrl": "/algorithms/interpolation_search.html"
+  },"18": {
+    "doc": "Knuth-Morris-Pratt Algorithm",
+    "title": "Visualization of Knuth-Morris-Pratt Algorithm",
+    "description": "Visualization and Implementation of Knuth-Morris-Pratt String Search Algorithm",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/kmp.html#visualization-of-knuth-morris-pratt-algorithm",
+    "relUrl": "/algorithms/kmp.html#visualization-of-knuth-morris-pratt-algorithm"
+  },"19": {
+    "doc": "Knuth-Morris-Pratt Algorithm",
+    "title": "Implementation of Knuth-Morris-Pratt Algorithm",
+    "description": "Visualization and Implementation of Knuth-Morris-Pratt String Search Algorithm",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/kmp.html#implementation-of-knuth-morris-pratt-algorithm",
+    "relUrl": "/algorithms/kmp.html#implementation-of-knuth-morris-pratt-algorithm"
+  },"20": {
+    "doc": "Knuth-Morris-Pratt Algorithm",
+    "title": "Knuth-Morris-Pratt Algorithm",
+    "description": "Visualization and Implementation of Knuth-Morris-Pratt String Search Algorithm",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/kmp.html",
+    "relUrl": "/algorithms/kmp.html"
+  },"21": {
+    "doc": "Linear Search",
+    "title": "Visualization of Linear Search",
+    "description": "Visualization and Implementation of Linear Search",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/linear_search.html#visualization-of-linear-search",
+    "relUrl": "/algorithms/linear_search.html#visualization-of-linear-search"
+  },"22": {
+    "doc": "Linear Search",
+    "title": "Implementation of Linear Search",
+    "description": "Visualization and Implementation of Linear Search",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/linear_search.html#implementation-of-linear-search",
+    "relUrl": "/algorithms/linear_search.html#implementation-of-linear-search"
+  },"23": {
+    "doc": "Linear Search",
+    "title": "Linear Search",
+    "description": "Visualization and Implementation of Linear Search",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/linear_search.html",
+    "relUrl": "/algorithms/linear_search.html"
+  },"24": {
+    "doc": "Merge Sort",
+    "title": "Visualization of Merge Sort",
+    "description": "Visualization and Implementation of Merge Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/merge_sort.html#visualization-of-merge-sort",
+    "relUrl": "/algorithms/merge_sort.html#visualization-of-merge-sort"
+  },"25": {
+    "doc": "Merge Sort",
+    "title": "Implementation of Merge Sort",
+    "description": "Visualization and Implementation of Merge Sort",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/merge_sort.html#implementation-of-merge-sort",
+    "relUrl": "/algorithms/merge_sort.html#implementation-of-merge-sort"
+  },"26": {
+    "doc": "Merge Sort",
+    "title": "Merge Sort",
+    "description": "Visualization and Implementation of Merge Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/merge_sort.html",
+    "relUrl": "/algorithms/merge_sort.html"
+  },"27": {
+    "doc": "Quick Sort",
+    "title": "Visualization of Quick Sort",
+    "description": "Visualization and Implementation of Quick Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/quick_sort.html#visualization-of-quick-sort",
+    "relUrl": "/algorithms/quick_sort.html#visualization-of-quick-sort"
+  },"28": {
+    "doc": "Quick Sort",
+    "title": "Implementation of Quick Sort",
+    "description": "Visualization and Implementation of Quick Sort",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/quick_sort.html#implementation-of-quick-sort",
+    "relUrl": "/algorithms/quick_sort.html#implementation-of-quick-sort"
+  },"29": {
+    "doc": "Quick Sort",
+    "title": "Quick Sort",
+    "description": "Visualization and Implementation of Quick Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/quick_sort.html",
+    "relUrl": "/algorithms/quick_sort.html"
+  },"30": {
+    "doc": "Selection Sort",
+    "title": "Visualization of Selection Sort",
+    "description": "Visualization and Implementation of Selection Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/selection_sort.html#visualization-of-selection-sort",
+    "relUrl": "/algorithms/selection_sort.html#visualization-of-selection-sort"
+  },"31": {
+    "doc": "Selection Sort",
+    "title": "Implementation of Selection Sort",
+    "description": "Visualization and Implementation of Selection Sort",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/selection_sort.html#implementation-of-selection-sort",
+    "relUrl": "/algorithms/selection_sort.html#implementation-of-selection-sort"
+  },"32": {
+    "doc": "Selection Sort",
+    "title": "Selection Sort",
+    "description": "Visualization and Implementation of Selection Sort",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/selection_sort.html",
+    "relUrl": "/algorithms/selection_sort.html"
+  },"33": {
+    "doc": "Tower Of Hanoi",
+    "title": "Visualization of Tower Of Hanoi",
+    "description": "Visualization and Implementation of Tower Of Hanoi",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/tower_of_hanoi.html#visualization-of-tower-of-hanoi",
+    "relUrl": "/algorithms/tower_of_hanoi.html#visualization-of-tower-of-hanoi"
+  },"34": {
+    "doc": "Tower Of Hanoi",
+    "title": "Implementation of Tower Of Hanoi",
+    "description": "Visualization and Implementation of Tower Of Hanoi",
+    "content": ". | Java | Python | C | . ",
+    "url": "https://gbhat.com/algorithms/tower_of_hanoi.html#implementation-of-tower-of-hanoi",
+    "relUrl": "/algorithms/tower_of_hanoi.html#implementation-of-tower-of-hanoi"
+  },"35": {
+    "doc": "Tower Of Hanoi",
+    "title": "Tower Of Hanoi",
+    "description": "Visualization and Implementation of Tower Of Hanoi",
+    "content": " ",
+    "url": "https://gbhat.com/algorithms/tower_of_hanoi.html",
+    "relUrl": "/algorithms/tower_of_hanoi.html"
+  }
 }
