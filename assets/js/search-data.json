@@ -62,188 +62,349 @@
     "url": "https://gbhat.com/algorithms/bubble_sort.html",
     "relUrl": "/algorithms/bubble_sort.html"
   },"9": {
+    "doc": "Gradient Descent Learning Rates",
+    "title": "Gradient Descent Learning Rates",
+    "description": "Different Learning Rates in Gradient Descent",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/gradient_descent_learning_rates.html",
+    "relUrl": "/machine_learning/gradient_descent_learning_rates.html"
+  },"10": {
+    "doc": "Gradient Descent Learning Rates",
+    "title": "Implementation of Gradient Descent Learning Rates",
+    "description": "Different Learning Rates in Gradient Descent",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/gradient_descent_learning_rates.html#implementation-of-gradient-descent-learning-rates",
+    "relUrl": "/machine_learning/gradient_descent_learning_rates.html#implementation-of-gradient-descent-learning-rates"
+  },"11": {
+    "doc": "Gradient Descent with Momentum",
+    "title": "Gradient Descent with Momentum",
+    "description": "Gradient Descent with Momentum",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/gradient_descent_with_momentum.html",
+    "relUrl": "/machine_learning/gradient_descent_with_momentum.html"
+  },"12": {
+    "doc": "Gradient Descent with Momentum",
+    "title": "Implementation of Gradient Descent with Momentum",
+    "description": "Gradient Descent with Momentum",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/gradient_descent_with_momentum.html#implementation-of-gradient-descent-with-momentum",
+    "relUrl": "/machine_learning/gradient_descent_with_momentum.html#implementation-of-gradient-descent-with-momentum"
+  },"13": {
     "doc": "Heap Sort",
     "title": "Visualization of Heap Sort",
     "description": "Visualization and Implementation of Heap Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/heap_sort.html#visualization-of-heap-sort",
     "relUrl": "/algorithms/heap_sort.html#visualization-of-heap-sort"
-  },"10": {
+  },"14": {
     "doc": "Heap Sort",
     "title": "Implementation of Heap Sort",
     "description": "Visualization and Implementation of Heap Sort",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/heap_sort.html#implementation-of-heap-sort",
     "relUrl": "/algorithms/heap_sort.html#implementation-of-heap-sort"
-  },"11": {
+  },"15": {
     "doc": "Heap Sort",
     "title": "Heap Sort",
     "description": "Visualization and Implementation of Heap Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/heap_sort.html",
     "relUrl": "/algorithms/heap_sort.html"
-  },"12": {
+  },"16": {
     "doc": "Insertion Sort",
     "title": "Visualization of Insertion Sort",
     "description": "Visualization and Implementation of Insertion Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/insertion_sort.html#visualization-of-insertion-sort",
     "relUrl": "/algorithms/insertion_sort.html#visualization-of-insertion-sort"
-  },"13": {
+  },"17": {
     "doc": "Insertion Sort",
     "title": "Implementation of Insertion Sort",
     "description": "Visualization and Implementation of Insertion Sort",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/insertion_sort.html#implementation-of-insertion-sort",
     "relUrl": "/algorithms/insertion_sort.html#implementation-of-insertion-sort"
-  },"14": {
+  },"18": {
     "doc": "Insertion Sort",
     "title": "Insertion Sort",
     "description": "Visualization and Implementation of Insertion Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/insertion_sort.html",
     "relUrl": "/algorithms/insertion_sort.html"
-  },"15": {
+  },"19": {
     "doc": "Interpolation Search",
     "title": "Visualization of Interpolation Search",
     "description": "Visualization and Implementation of Interpolation Search",
     "content": " ",
     "url": "https://gbhat.com/algorithms/interpolation_search.html#visualization-of-interpolation-search",
     "relUrl": "/algorithms/interpolation_search.html#visualization-of-interpolation-search"
-  },"16": {
+  },"20": {
     "doc": "Interpolation Search",
     "title": "Implementation of Interpolation Search",
     "description": "Visualization and Implementation of Interpolation Search",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/interpolation_search.html#implementation-of-interpolation-search",
     "relUrl": "/algorithms/interpolation_search.html#implementation-of-interpolation-search"
-  },"17": {
+  },"21": {
     "doc": "Interpolation Search",
     "title": "Interpolation Search",
     "description": "Visualization and Implementation of Interpolation Search",
     "content": " ",
     "url": "https://gbhat.com/algorithms/interpolation_search.html",
     "relUrl": "/algorithms/interpolation_search.html"
-  },"18": {
+  },"22": {
     "doc": "Knuth-Morris-Pratt Algorithm",
     "title": "Visualization of Knuth-Morris-Pratt Algorithm",
     "description": "Visualization and Implementation of Knuth-Morris-Pratt String Search Algorithm",
     "content": " ",
     "url": "https://gbhat.com/algorithms/kmp.html#visualization-of-knuth-morris-pratt-algorithm",
     "relUrl": "/algorithms/kmp.html#visualization-of-knuth-morris-pratt-algorithm"
-  },"19": {
+  },"23": {
     "doc": "Knuth-Morris-Pratt Algorithm",
     "title": "Implementation of Knuth-Morris-Pratt Algorithm",
     "description": "Visualization and Implementation of Knuth-Morris-Pratt String Search Algorithm",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/kmp.html#implementation-of-knuth-morris-pratt-algorithm",
     "relUrl": "/algorithms/kmp.html#implementation-of-knuth-morris-pratt-algorithm"
-  },"20": {
+  },"24": {
     "doc": "Knuth-Morris-Pratt Algorithm",
     "title": "Knuth-Morris-Pratt Algorithm",
     "description": "Visualization and Implementation of Knuth-Morris-Pratt String Search Algorithm",
     "content": " ",
     "url": "https://gbhat.com/algorithms/kmp.html",
     "relUrl": "/algorithms/kmp.html"
-  },"21": {
+  },"25": {
+    "doc": "Linear Regression",
+    "title": "Visualization of Linear Regression",
+    "description": "Visualization and Implementation of Linear Regression",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/linear_regression.html#visualization-of-linear-regression",
+    "relUrl": "/machine_learning/linear_regression.html#visualization-of-linear-regression"
+  },"26": {
+    "doc": "Linear Regression",
+    "title": "Implementation of Linear Regression",
+    "description": "Visualization and Implementation of Linear Regression",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/linear_regression.html#implementation-of-linear-regression",
+    "relUrl": "/machine_learning/linear_regression.html#implementation-of-linear-regression"
+  },"27": {
+    "doc": "Linear Regression",
+    "title": "Linear Regression",
+    "description": "Visualization and Implementation of Linear Regression",
+    "content": " ",
+    "url": "https://gbhat.com/machine_learning/linear_regression.html",
+    "relUrl": "/machine_learning/linear_regression.html"
+  },"28": {
     "doc": "Linear Search",
     "title": "Visualization of Linear Search",
     "description": "Visualization and Implementation of Linear Search",
     "content": " ",
     "url": "https://gbhat.com/algorithms/linear_search.html#visualization-of-linear-search",
     "relUrl": "/algorithms/linear_search.html#visualization-of-linear-search"
-  },"22": {
+  },"29": {
     "doc": "Linear Search",
     "title": "Implementation of Linear Search",
     "description": "Visualization and Implementation of Linear Search",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/linear_search.html#implementation-of-linear-search",
     "relUrl": "/algorithms/linear_search.html#implementation-of-linear-search"
-  },"23": {
+  },"30": {
     "doc": "Linear Search",
     "title": "Linear Search",
     "description": "Visualization and Implementation of Linear Search",
     "content": " ",
     "url": "https://gbhat.com/algorithms/linear_search.html",
     "relUrl": "/algorithms/linear_search.html"
-  },"24": {
+  },"31": {
     "doc": "Merge Sort",
     "title": "Visualization of Merge Sort",
     "description": "Visualization and Implementation of Merge Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/merge_sort.html#visualization-of-merge-sort",
     "relUrl": "/algorithms/merge_sort.html#visualization-of-merge-sort"
-  },"25": {
+  },"32": {
     "doc": "Merge Sort",
     "title": "Implementation of Merge Sort",
     "description": "Visualization and Implementation of Merge Sort",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/merge_sort.html#implementation-of-merge-sort",
     "relUrl": "/algorithms/merge_sort.html#implementation-of-merge-sort"
-  },"26": {
+  },"33": {
     "doc": "Merge Sort",
     "title": "Merge Sort",
     "description": "Visualization and Implementation of Merge Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/merge_sort.html",
     "relUrl": "/algorithms/merge_sort.html"
-  },"27": {
+  },"34": {
+    "doc": "Optimization with Momentum",
+    "title": "Optimization with Momentum",
+    "description": "Optimization with Momentum on Non-Convex function",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/optimize_with_momentum.html",
+    "relUrl": "/machine_learning/optimize_with_momentum.html"
+  },"35": {
+    "doc": "Optimization with Momentum",
+    "title": "Implementation of Optimization with Momentum",
+    "description": "Optimization with Momentum on Non-Convex function",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/optimize_with_momentum.html#implementation-of-optimization-with-momentum",
+    "relUrl": "/machine_learning/optimize_with_momentum.html#implementation-of-optimization-with-momentum"
+  },"36": {
+    "doc": "Particle Swarm Optimization on Convex Function",
+    "title": "Particle Swarm Optimization on Convex Function",
+    "description": "Particle Swarm Optimization on Convex Function",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/pso_convex.html",
+    "relUrl": "/machine_learning/pso_convex.html"
+  },"37": {
+    "doc": "Particle Swarm Optimization on Convex Function",
+    "title": "Implementation of Particle Swarm Optimization on Convex Function",
+    "description": "Particle Swarm Optimization on Convex Function",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/pso_convex.html#implementation-of-particle-swarm-optimization-on-convex-function",
+    "relUrl": "/machine_learning/pso_convex.html#implementation-of-particle-swarm-optimization-on-convex-function"
+  },"38": {
+    "doc": "Particle Swarm Optimization on Non-Convex Function",
+    "title": "Particle Swarm Optimization on Non-Convex Function",
+    "description": "Particle Swarm Optimization on Non-Convex Function",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/pso_nonconvex.html",
+    "relUrl": "/machine_learning/pso_nonconvex.html"
+  },"39": {
+    "doc": "Particle Swarm Optimization on Non-Convex Function",
+    "title": "Implementation of Particle Swarm Optimization on Non-Convex Function",
+    "description": "Particle Swarm Optimization on Non-Convex Function",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/pso_nonconvex.html#implementation-of-particle-swarm-optimization-on-non-convex-function",
+    "relUrl": "/machine_learning/pso_nonconvex.html#implementation-of-particle-swarm-optimization-on-non-convex-function"
+  },"40": {
+    "doc": "Particle Swarm Optimization on Six-Hump Camel Back Function",
+    "title": "Particle Swarm Optimization on Six-Hump Camel Back Function",
+    "description": "Particle Swarm Optimization on Six-Hump Camel Back Function",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/pso_shcb.html",
+    "relUrl": "/machine_learning/pso_shcb.html"
+  },"41": {
+    "doc": "Particle Swarm Optimization on Six-Hump Camel Back Function",
+    "title": "Implementation of Particle Swarm Optimization on Six-Hump Camel Back Function",
+    "description": "Particle Swarm Optimization on Six-Hump Camel Back Function",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/pso_shcb.html#implementation-of-particle-swarm-optimization-on-six-hump-camel-back-function",
+    "relUrl": "/machine_learning/pso_shcb.html#implementation-of-particle-swarm-optimization-on-six-hump-camel-back-function"
+  },"42": {
+    "doc": "Polynomial Regression",
+    "title": "Visualization of Polynomial Regression",
+    "description": "Visualization and Implementation of Polynomial Regression",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/polynomial_regression.html#visualization-of-polynomial-regression",
+    "relUrl": "/machine_learning/polynomial_regression.html#visualization-of-polynomial-regression"
+  },"43": {
+    "doc": "Polynomial Regression",
+    "title": "Implementation of Polynomial Regression",
+    "description": "Visualization and Implementation of Polynomial Regression",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/polynomial_regression.html#implementation-of-polynomial-regression",
+    "relUrl": "/machine_learning/polynomial_regression.html#implementation-of-polynomial-regression"
+  },"44": {
+    "doc": "Polynomial Regression",
+    "title": "Polynomial Regression",
+    "description": "Visualization and Implementation of Polynomial Regression",
+    "content": " ",
+    "url": "https://gbhat.com/machine_learning/polynomial_regression.html",
+    "relUrl": "/machine_learning/polynomial_regression.html"
+  },"45": {
+    "doc": "Polynomial Regression",
+    "title": "Visualization of Polynomial Regression",
+    "description": "Polynomial Regression on Linköping temperature data",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/polynomial_regression_2.html#visualization-of-polynomial-regression",
+    "relUrl": "/machine_learning/polynomial_regression_2.html#visualization-of-polynomial-regression"
+  },"46": {
+    "doc": "Polynomial Regression",
+    "title": "Implementation of Polynomial Regression",
+    "description": "Polynomial Regression on Linköping temperature data",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/polynomial_regression_2.html#implementation-of-polynomial-regression",
+    "relUrl": "/machine_learning/polynomial_regression_2.html#implementation-of-polynomial-regression"
+  },"47": {
+    "doc": "Polynomial Regression",
+    "title": "Polynomial Regression",
+    "description": "Polynomial Regression on Linköping temperature data",
+    "content": " ",
+    "url": "https://gbhat.com/machine_learning/polynomial_regression_2.html",
+    "relUrl": "/machine_learning/polynomial_regression_2.html"
+  },"48": {
+    "doc": "Polynomial Regression Under Fit, Good Fit, Over Fit",
+    "title": "Polynomial Regression Under Fit, Good Fit, Over Fit",
+    "description": "Polynomial Regression Under Fit, Good Fit, Over Fit",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/polynomial_regression_fit.html",
+    "relUrl": "/machine_learning/polynomial_regression_fit.html"
+  },"49": {
+    "doc": "Polynomial Regression Under Fit, Good Fit, Over Fit",
+    "title": "Implementation of Polynomial Regression",
+    "description": "Polynomial Regression Under Fit, Good Fit, Over Fit",
+    "content": ". ",
+    "url": "https://gbhat.com/machine_learning/polynomial_regression_fit.html#implementation-of-polynomial-regression",
+    "relUrl": "/machine_learning/polynomial_regression_fit.html#implementation-of-polynomial-regression"
+  },"50": {
     "doc": "Quick Sort",
     "title": "Visualization of Quick Sort",
     "description": "Visualization and Implementation of Quick Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/quick_sort.html#visualization-of-quick-sort",
     "relUrl": "/algorithms/quick_sort.html#visualization-of-quick-sort"
-  },"28": {
+  },"51": {
     "doc": "Quick Sort",
     "title": "Implementation of Quick Sort",
     "description": "Visualization and Implementation of Quick Sort",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/quick_sort.html#implementation-of-quick-sort",
     "relUrl": "/algorithms/quick_sort.html#implementation-of-quick-sort"
-  },"29": {
+  },"52": {
     "doc": "Quick Sort",
     "title": "Quick Sort",
     "description": "Visualization and Implementation of Quick Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/quick_sort.html",
     "relUrl": "/algorithms/quick_sort.html"
-  },"30": {
+  },"53": {
     "doc": "Selection Sort",
     "title": "Visualization of Selection Sort",
     "description": "Visualization and Implementation of Selection Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/selection_sort.html#visualization-of-selection-sort",
     "relUrl": "/algorithms/selection_sort.html#visualization-of-selection-sort"
-  },"31": {
+  },"54": {
     "doc": "Selection Sort",
     "title": "Implementation of Selection Sort",
     "description": "Visualization and Implementation of Selection Sort",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/selection_sort.html#implementation-of-selection-sort",
     "relUrl": "/algorithms/selection_sort.html#implementation-of-selection-sort"
-  },"32": {
+  },"55": {
     "doc": "Selection Sort",
     "title": "Selection Sort",
     "description": "Visualization and Implementation of Selection Sort",
     "content": " ",
     "url": "https://gbhat.com/algorithms/selection_sort.html",
     "relUrl": "/algorithms/selection_sort.html"
-  },"33": {
+  },"56": {
     "doc": "Tower Of Hanoi",
     "title": "Visualization of Tower Of Hanoi",
     "description": "Visualization and Implementation of Tower Of Hanoi",
     "content": " ",
     "url": "https://gbhat.com/algorithms/tower_of_hanoi.html#visualization-of-tower-of-hanoi",
     "relUrl": "/algorithms/tower_of_hanoi.html#visualization-of-tower-of-hanoi"
-  },"34": {
+  },"57": {
     "doc": "Tower Of Hanoi",
     "title": "Implementation of Tower Of Hanoi",
     "description": "Visualization and Implementation of Tower Of Hanoi",
     "content": ". | Java | Python | C | . ",
     "url": "https://gbhat.com/algorithms/tower_of_hanoi.html#implementation-of-tower-of-hanoi",
     "relUrl": "/algorithms/tower_of_hanoi.html#implementation-of-tower-of-hanoi"
-  },"35": {
+  },"58": {
     "doc": "Tower Of Hanoi",
     "title": "Tower Of Hanoi",
     "description": "Visualization and Implementation of Tower Of Hanoi",
